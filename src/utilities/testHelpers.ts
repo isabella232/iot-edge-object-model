@@ -99,6 +99,8 @@ export const sample$EdgeAgentDesiredPropertiesViewModel = (): $EdgeAgentDesiredP
     vm.edgeHubModuleSpecificationViewModel.status = 'started';
     vm.edgeHubModuleSpecificationViewModel.type = 'docker';
     vm.edgeHubModuleSpecificationViewModel.version = '1.0';
+    // tslint:disable-next-line: no-magic-numbers
+    vm.edgeHubModuleSpecificationViewModel.priority = 7;
 
     vm.loggingOptions = 'loggingOptions';
     vm.minDockerVersion = 'v1.25';
@@ -130,6 +132,7 @@ export const sample$EdgeAgentDesiredPropertiesViewModel = (): $EdgeAgentDesiredP
     moduleSpecification.status = 'started';
     moduleSpecification.type = 'docker';
     moduleSpecification.version = '1.0';
+    moduleSpecification.priority = 0;
     moduleSpecification.desiredProperties = {
         'properties.desired': {
             hello: 'world'
@@ -331,6 +334,7 @@ export const sample$EdgeAgentModuleTwin = () => {
                             }
                         },
                         imagePullPolicy: 'never',
+                        priority: 7,
                         restartPolicy: 'always',
                         settings: {
                             createOptions: '{\'key\':\'value\'}',
@@ -376,6 +380,7 @@ export const sample$EdgeAgentModuleTwin = () => {
                                 value: 'edgeHubVar1Value'
                             }
                         },
+                        priority: 4,
                         restartPolicy: 'always',
                         settings: {
                             createOptions: JSON.stringify({ Env: 'value'}),

@@ -5,5 +5,6 @@ import { BaseEdgeModuleSpecificationViewModel } from './baseEdgeModuleSpecificat
 
 export interface EdgeHubModuleSpecificationViewModel extends BaseEdgeModuleSpecificationViewModel {
     status: string;
+    priority?: number;
     restartPolicy: string;
 }
