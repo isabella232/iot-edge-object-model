@@ -100,7 +100,7 @@ export const sample$EdgeAgentDesiredPropertiesViewModel = (): $EdgeAgentDesiredP
     vm.edgeHubModuleSpecificationViewModel.type = 'docker';
     vm.edgeHubModuleSpecificationViewModel.version = '1.0';
     // tslint:disable-next-line: no-magic-numbers
-    vm.edgeHubModuleSpecificationViewModel.priority = 7;
+    vm.edgeHubModuleSpecificationViewModel.startupOrder = 7;
 
     vm.loggingOptions = 'loggingOptions';
     vm.minDockerVersion = 'v1.25';
@@ -132,7 +132,7 @@ export const sample$EdgeAgentDesiredPropertiesViewModel = (): $EdgeAgentDesiredP
     moduleSpecification.status = 'started';
     moduleSpecification.type = 'docker';
     moduleSpecification.version = '1.0';
-    moduleSpecification.priority = 0;
+    moduleSpecification.startupOrder = 0;
     moduleSpecification.desiredProperties = {
         'properties.desired': {
             hello: 'world'
@@ -334,12 +334,12 @@ export const sample$EdgeAgentModuleTwin = () => {
                             }
                         },
                         imagePullPolicy: 'never',
-                        priority: 7,
                         restartPolicy: 'always',
                         settings: {
                             createOptions: '{\'key\':\'value\'}',
                             image: 'mcr/azureiotedge-simulated-temperature-sensor:1.0-preview',
                         },
+                        startupOrder: 7,
                         status: 'running',
                         type: 'docker',
                         version: '1.0',
@@ -380,12 +380,12 @@ export const sample$EdgeAgentModuleTwin = () => {
                                 value: 'edgeHubVar1Value'
                             }
                         },
-                        priority: 4,
                         restartPolicy: 'always',
                         settings: {
                             createOptions: JSON.stringify({ Env: 'value'}),
                             image: 'mcr/azureiotedge-hub:1.0-preview',
                         },
+                        startupOrder: 4,
                         status: 'running',
                         type: 'docker'
                     }

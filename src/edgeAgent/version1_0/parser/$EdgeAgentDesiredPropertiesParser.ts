@@ -67,8 +67,8 @@ export const getModuleSpecificationViewModel = (edgeAgentDesiredProperties: $Edg
         image: baseModuleSpecificationViewModel.image,
         imagePullPolicy: baseModuleSpecificationViewModel.imagePullPolicy,
         name: baseModuleSpecificationViewModel.name,
-        priority: moduleSpecification.priority,
         restartPolicy: '',
+        startupOrder: moduleSpecification.startupOrder,
         status: '',
         type: baseModuleSpecificationViewModel.type,
         version: baseModuleSpecificationViewModel.version
@@ -296,8 +296,8 @@ export const getEdgeHubSpecificationViewModel = (edgeAgentDesiredProperties: $Ed
         image: baseModuleSpecificationViewModel.image,
         imagePullPolicy: baseModuleSpecificationViewModel.imagePullPolicy,
         name: baseModuleSpecificationViewModel.name,
-        priority: edgeHub.priority,
         restartPolicy,
+        startupOrder: edgeHub.startupOrder,
         status,
         type: baseModuleSpecificationViewModel.type,
         version: baseModuleSpecificationViewModel.version

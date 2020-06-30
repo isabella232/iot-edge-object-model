@@ -9,7 +9,7 @@ export interface EdgeModuleSpecificationViewModel extends BaseEdgeModuleSpecific
     restartPolicy: string;
     status: string;
     asaModuleInformation?: AsaModuleInformation;
-    priority?: number;
+    startupOrder?: number;
 }
 
 export interface AsaModuleInformation {
