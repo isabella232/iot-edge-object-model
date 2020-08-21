@@ -8,8 +8,8 @@ before_install:
 jobs:
   include:
     - stage: Build and Test
+      node_js: lts/*
       script:
         - npm run build-ci
         - npm run test
         - npm run verify-coverage
-
