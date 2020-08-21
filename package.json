@@ -28,7 +28,7 @@
     "coverage-compile": "tsc --target es6 --module CommonJS --moduleResolution node ./scripts/verifyCoverage.ts",
     "test": "jest --coverage",
     "lint": "tslint --project . -s node_modules/tslint-stylish -t stylish",
-    "verify-coverage": "npm run coverage-compile && node ./scripts/verifyCoverage.js",
+    "verify-coverage": "npm run coverage-compile && node ./scripts/verifyCoverage.js"
   },
   "jest": {
     "collectCoverage": true,
